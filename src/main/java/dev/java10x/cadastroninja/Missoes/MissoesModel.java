@@ -18,9 +18,11 @@ public class MissoesModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    @Column(name = "nome")
     private String nome;
     private String dificuldade;
+    @Column(name = "imagem_url")
+    private String imgurl;
 
     @OneToMany(mappedBy = "missoes") // "missoes" é o nome do campo no NinjaModel
     // evita loop infinito ao virar JSON
